@@ -18,7 +18,7 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: #040404 url("https://drive.google.com/file/d/16DdcWC8_wgpuVANU7XaTscQZGmk0qdm6/view?usp=sharing") top right no-repeat;
+  background: #040404 url("HTTPS://mosabbirx.github.io/assets/img/Punch.gif") top right no-repeat;
   background-size: cover;
   left: 0;
   right: 0;

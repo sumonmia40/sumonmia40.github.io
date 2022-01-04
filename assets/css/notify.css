@@ -12,7 +12,7 @@ html,body{
 body{
   display: grid;
   place-items: center;
-  overflow: hidden;
+  overflow: show;
 }
 button{
   padding: 8px 16px;
@@ -39,7 +39,7 @@ button{
   opacity: 0;
   pointer-events: none;
 }
-.alert.showAlert{
+.alert.hideAlert{
   opacity: 1;
   pointer-events: auto;
 }
@@ -60,7 +60,7 @@ button{
     transform: translateX(-10px);
   }
 }
-.alert.hide{
+.alert.show{
   animation: hide_slide 1s ease forwards;
 }
 @keyframes hide_slide {

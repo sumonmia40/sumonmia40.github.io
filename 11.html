@@ -1,28 +1,36 @@
-        <link rel="stylesheet" href="notifast.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <title>Notifast Example</title>
-    </head>
-
-    <body>
-
-    </body>
-
-    <script src="notifast.min.js"></script>
-    <script>
-        
-        let notificationApp = notifast({ position: 'center' })
-   
-        let notification = {
-            title: 'put your title here',
-            description: 'try to write anything here',
-            icon: '<i class="fas fa-bell"></i>',
-            backgroundColor: '#FFF',
-            fontColor: '#0F73FA',
-            canBeClosed: false
-        }
-
-        notificationApp.emitNotification(notification)
-
-</script>
-
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Warning Alert Notification | CodingNepal</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+   </head>
+   <body>
+      <button>Show Alert</button>
+      <div class="alert hide">
+         <span class="fas fa-exclamation-circle"></span>
+         <span class="msg">Warning: This is a warning alert!</span>
+         <div class="close-btn">
+            <span class="fas fa-times"></span>
+         </div>
+      </div>
+      <script>
+         $('button').click(function(){
+           $('.alert').addClass("show");
+           $('.alert').removeClass("hide");
+           $('.alert').addClass("showAlert");
+           setTimeout(function(){
+             $('.alert').removeClass("show");
+             $('.alert').addClass("hide");
+           },5000);
+         });
+         $('.close-btn').click(function(){
+           $('.alert').removeClass("show");
+           $('.alert').addClass("hide");
+         });
+      </script>
+   </body>
 </html>
